@@ -33,11 +33,11 @@ export default function TabNavigation() {
                 headerStyle: {
                     backgroundColor: "#FFF3DC",
                     height: 115,
-                    borderBottomWidth: 2,
+                    borderBottomWidth: 1,
                     borderBottomColor: "#5C1B1B",
                 },
                 headerTitleAlign: "center",
-                headerTintColor: "#f7f7f7",
+                headerTintColor: "#FFF3DC",
                 headerTitleStyle: {
                     fontSize: 30,
                     fontWeight: "bold",
@@ -54,9 +54,9 @@ export default function TabNavigation() {
                     paddingBottom: 0,
                     zIndex: 10,
                     borderTopWidth: 1,
-                    borderTopColor: "#e0e0e0",
-                    borderTopLeftRadius: 60,
-                    borderTopRightRadius: 60,
+                    borderTopColor: "#FFF3DC",
+                    borderTopLeftRadius: 50,
+                    borderTopRightRadius: 50,
                 },
                 tabBarLabelStyle: {
                     fontSize: 15,
@@ -65,7 +65,7 @@ export default function TabNavigation() {
                     marginTop: 15,
                     marginBottom: 5,
                 },
-                tabBarActiveTintColor: "#B58248",
+                tabBarActiveTintColor: "#DFB083",
                 tabBarInactiveTintColor: "white",
             }}>
             <Tab.Screen
