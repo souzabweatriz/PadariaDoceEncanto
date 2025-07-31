@@ -1,16 +1,19 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
+import Button from "../components/Button"; 
+import Logo from "../assets/Logo.png"; // Import the logo image
+
 
 export default function Inicial({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.welcomeText}>Bem-Vindo a Padaria Doce Encanto</Text>
-            <TouchableOpacity 
+            <Text style={styles.welcomeText}>Bem-Vindo a Padaria Doce Encanto!</Text>
+            <Image style={styles.image} source={Logo} /> 
+            <Button 
                 onPress={() => navigation.navigate("BottomTabNavigator")}
                 style={styles.button}
             >
-                <Text style={styles.buttonText}>Go to Home</Text>
-            </TouchableOpacity>
+            </Button>
         </View>
     );
 }
@@ -20,6 +23,7 @@ const styles = StyleSheet.create({
         flex: 1, 
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "rgb(255, 245, 223)",
     },
     welcomeText: {
         fontSize: 20,
@@ -27,12 +31,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 20,
     },
-    button: {
-        marginTop: 20,
-        padding: 10,
-        backgroundColor: "#007BFF",
-    },
-    buttonText: {
-        color: "#fff",
+    image: {
+        width: 200,
+        height: 200,
+        marginBottom: 20,
     },
 });
