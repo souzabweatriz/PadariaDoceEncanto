@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { View, Text, ScrollView, StyleSheet, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import first from "../assets/images/first.png";
+import second from "../assets/images/second.png";
 
 export default function AboutUs() {
     const scrollRef = useRef(null);
@@ -33,12 +34,19 @@ export default function AboutUs() {
                     oferecer!
                 </Text>
                 <Text style={styles.title}>Conheça nossa trajetória</Text>
-                <Image style={styles.image} source={first} />
                 <Text style={styles.year}>1940</Text>
+                <Image style={styles.image} source={first} />
                 <Text style={styles.text}>
-                    Desde o início, nossa missão tem sido criar doces que não apenas
-                    satisfaçam o paladar, mas também tragam alegria e conforto. Cada
-                    receita é uma homenagem às nossas raízes e à paixão pela confeitaria.
+                    Onde tudo começou -
+
+                    Abandonado pela esposa, um pai solteiro com cinco filhos encontrou na cozinha um refúgio e um propósito. Com poucos ingredientes, mas muito amor, ele começou a fazer bolos e pães para alimentar sua família — e logo, para vizinhos e amigos. Nascia ali, em um pequeno fogão à lenha, o que viria a ser nossa confeitaria.
+                </Text>
+                <Text style={styles.year}>2025</Text>
+                <Image style={styles.image} source={second} />
+                <Text style={styles.text}>
+                    💖 Hoje — Mais que doces, histórias
+
+                    Seguimos firmes na missão que começou com um pai corajoso: transformar dificuldades em doçura e espalhar amor em forma de receita. Cada fatia, cada confeite, é parte viva dessa história.
                 </Text>
             </ScrollView>
         </View>
@@ -48,22 +56,22 @@ export default function AboutUs() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'rgb(245, 228, 220)',
+        backgroundColor: 'rgb(255, 245, 223)',
         padding: 20,
     },
     scrollView: {
         paddingBottom: 30,
     },
     title: {
-        fontSize: 28,
+        fontSize: 38,
         fontWeight: 'bold',
-        color: '#800020', 
+        color: '#800020',
         marginBottom: 10,
         textAlign: 'center',
     },
     text: {
         fontSize: 16,
-        color: '#654321', 
+        color: '#654321',
         lineHeight: 24,
         textAlign: 'justify',
         marginBottom: 20,
@@ -74,7 +82,7 @@ const styles = StyleSheet.create({
         color: 'rgb(211, 180, 122)',
         marginBottom: 10,
         marginTop: 10,
-        textAlign: 'center',
+        marginLeft: 20,
         fontFamily: 'Arial',
         fontSize: 40,
         fontStyle: 'italic',
