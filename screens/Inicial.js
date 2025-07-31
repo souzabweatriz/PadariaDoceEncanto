@@ -9,7 +9,7 @@ export default function Inicial({ navigation }) {
         <View style={styles.container}>
             <Text style={styles.welcomeText}>Bem-Vindo a Padaria Doce Encanto!</Text>
             <Image style={styles.image} source={Logo} /> 
-            <Button 
+            <Button Script={"Clique aqui para explorar!"}
                 onPress={() => navigation.navigate("BottomTabNavigator")}
                 style={styles.button}
             >

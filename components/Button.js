@@ -1,16 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Logo from "../assets/Logo.png"; 
-import { Image } from "react-native";
 
-export default function Button() {
+export default function Button({ Script, onPress }) {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate("BottomTabNavigator")}
+        <TouchableOpacity onPress={onPress || (() => navigation.navigate("BottomTabNavigator"))}
             style={styles.button}>
-            <Text style={styles.text}>Clique aqui para explorar</Text>
+            <Text style={styles.text}>{Script}</Text>
 
         </TouchableOpacity>
     );
